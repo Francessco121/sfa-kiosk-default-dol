@@ -17,3 +17,8 @@ core/dll.c:
 	.data       start:0x802E8B60 end:0x802E9848
 	.sdata      start:0x80396BB8 end:0x80396BC0
 	.sbss       start:0x803987D8 end:0x803987F0
+
+dlls/engine/3_anim.c:
+	.text       start:0x800C8760 end:0x800D17D0
+	.data       start:0x802F3DC8 end:0x802F46A0
+	.sbss       start:0x80398EE8 end:0x80398FA8
