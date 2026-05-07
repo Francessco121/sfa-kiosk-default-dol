@@ -243,6 +243,8 @@ cflags_core = [
     "-sym on",
 ]
 
+cflags_dll = [*cflags_core]
+
 # Debug flags
 if args.debug:
     # Or -sym dwarf-2 for Wii compilers
@@ -308,6 +310,15 @@ def CoreLib(lib_name: str, objects: List[Object]) -> Dict[str, Any]:
         "objects": objects,
     }
 
+def DLLLib(lib_name: str, objects: List[Object]) -> Dict[str, Any]:
+    return {
+        "lib": lib_name,
+        "mw_version": "GC/1.2.5",
+        "cflags": cflags_dll,
+        "progress_category": "game",
+        "objects": objects,
+    }
+
 Matching = True                   # Object matches and should be linked
 NonMatching = False               # Object does not match and should not be linked
 Equivalent = config.non_matching  # Object should be linked when configured with --non-matching
@@ -333,6 +344,9 @@ config.libs = [
     },
     CoreLib("core", [
         Object(NonMatching, "core/dll.c")
+    ]),
+    DLLLib("3_anim", [
+        Object(NonMatching, "dlls/engine/3_anim.c")
     ])
 ]
 
