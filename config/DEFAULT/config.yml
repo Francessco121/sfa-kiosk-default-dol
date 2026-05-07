@@ -1,0 +1,7 @@
+name: default
+object_base: orig/DEFAULT
+object: default.dol
+hash: 77d1a4fad2a420bfcc5e6217266bc698542df20e
+symbols: config/DEFAULT/symbols.txt
+splits: config/DEFAULT/splits.txt
+mw_comment_version: 8
