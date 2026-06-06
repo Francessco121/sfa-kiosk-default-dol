@@ -2,7 +2,7 @@
 
 typedef struct {
 /*0*/ f32 value;
-/*4*/ u8 interpolation;
+/*4*/ s8 interpolation;
 /*5*/ s8 channel;
 /*6*/ s16 timeOffset;
 } AnimCurvesKeyframe;
