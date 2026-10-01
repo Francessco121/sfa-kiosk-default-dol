@@ -356,6 +356,9 @@ config.libs = [
         Object(NonMatching, "dolphin/os/OSArena.c"),
         Object(NonMatching, "dolphin/os/OSAudioSystem.c"),
     ]),
+    DolphinLib("dsp", [
+        Object(NonMatching, "dolphin/dsp/dsp_task.c"),
+    ]),
     CoreLib("core", [
         Object(NonMatching, "core/dll.c")
     ]),

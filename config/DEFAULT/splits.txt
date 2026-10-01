@@ -41,6 +41,11 @@ dolphin/os/OSAudioSystem.c:
 	.text       start:0x800088C4 end:0x80008B54
 	.data       start:0x802D2018 end:0x802D2170
 
+dolphin/dsp/dsp_task.c:
+	.text       start:0x8001A5C8 end:0x8001AFFC
+	.data       start:0x802D7688 end:0x802D7948
+	.sbss       start:0x80398450 end:0x80398468
+
 core/dll.c:
 	.text       start:0x80070B18 end:0x80070FD8
 	.data       start:0x802E8B60 end:0x802E9848
