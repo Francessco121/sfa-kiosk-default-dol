@@ -23,6 +23,18 @@ dlls/engine/3_anim.c:
 	.data       start:0x802F3DC8 end:0x802F46A0
 	.sbss       start:0x80398EE8 end:0x80398FA8
 
+dlls/engine/33.c:
+	.text       start:0x800FBB30 end:0x800FFED8
+	.data       start:0x802F7548 end:0x802F77BC
+
+dlls/engine/41.c:
+	.text       start:0x8010D498 end:0x8010F770
+	.data       start:0x802F8360 end:0x802F8528
+
 dlls/objects/208_tricky.c:
 	.text       start:0x801A8CF8 end:0x801B110C
 	.data       start:0x8030EDF8 end:0x8030FA78
+
+dlls/objects/CloudShipControl.c:
+	.text       start:0x8020133C end:0x802020B8
+	.data       start:0x80314710 end:0x80314780

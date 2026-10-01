@@ -210,7 +210,8 @@ cflags_base = [
     "-str reuse",
     "-multibyte",  # For Wii compilers, replace with `-enc SJIS`
     "-i include",
-    "-i libc",
+    "-i sdk/include",
+    "-i sdk/include/libc",
     f"-i build/{config.version}/include",
     f"-DBUILD_VERSION={version_num}",
     f"-DVERSION_{config.version}",
@@ -232,7 +233,8 @@ cflags_core = [
     "-str reuse",
     "-multibyte",
     "-i include",
-    "-i libc",
+    "-i sdk/include",
+    "-i sdk/include/libc",
     f"-i build/{config.version}/include",
     f"-DBUILD_VERSION={version_num}",
     f"-DVERSION_{config.version}",
@@ -347,7 +349,19 @@ config.libs = [
     ]),
     DLLLib("3_anim", [
         Object(NonMatching, "dlls/engine/3_anim.c")
-    ])
+    ]),
+    DLLLib("33", [
+        Object(NonMatching, "dlls/engine/33.c")
+    ]),
+    DLLLib("41", [
+        Object(NonMatching, "dlls/engine/41.c")
+    ]),
+    DLLLib("208_tricky", [
+        Object(NonMatching, "dlls/objects/208_tricky.c")
+    ]),
+    DLLLib("CloudShipControl", [
+        Object(NonMatching, "dlls/objects/CloudShipControl.c")
+    ]),
 ]
 
 

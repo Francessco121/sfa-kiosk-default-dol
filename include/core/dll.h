@@ -1,7 +1,7 @@
 #ifndef _SYS_DLL_H
 #define _SYS_DLL_H
 
-#include "types.h"
+#include "dolphin/types.h"
 #include "macros.h"
 
 #define MAX_LOADED_DLLS 128
