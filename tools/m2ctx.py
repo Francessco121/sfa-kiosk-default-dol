@@ -12,10 +12,13 @@ root_dir = os.path.abspath(os.path.join(script_dir, ".."))
 # Project-specific
 CPP_FLAGS = [
     "-Iinclude",
-    "-Ilibc",
+    "-Isdk/include",
+    "-Isdk/include/libc",
     "-D_LANGUAGE_C",
     "-DM2CTX",
     "-DPERMUTER",
+    "-DDEBUG",
+    #"-D__MWERKS__",
 ]
 
 def remove_big_comments(text: str):

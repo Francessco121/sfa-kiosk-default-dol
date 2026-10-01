@@ -5,6 +5,10 @@ A work-in-progress decompilation of the `default.dol` executable found inside of
 
 This repository does **not** contain any game assets or assembly whatsoever. An existing copy of the game is required.
 
+> **No-AI**
+>
+> This decompilation does not and will not make use of generative AI for any purpose.
+
 Dependencies
 ============
 

@@ -12,6 +12,35 @@ Sections:
 	.sbss       type:bss align:32
 	.sdata2     type:rodata align:8
 
+dolphin/os/OS.c:
+	.text       start:0x80006D74 end:0x800075AC
+	.data       start:0x802D0F5C end:0x802D1088
+
+dolphin/os/OSAddress.c:
+	.text       start:0x800075AC end:0x80007714
+	.data       start:0x802D1088 end:0x802D1139
+
+dolphin/os/OSAlarm.c:
+	.text       start:0x80007714 end:0x800080B8
+	.data       start:0x802D1140 end:0x802D1490
+	.sbss       start:0x80398250 end:0x80398258
+
+dolphin/os/OSAlloc.c:
+	.text       start:0x800080B8 end:0x800087C4
+	.data       start:0x802D1490 end:0x802D1F48
+	.sdata      start:0x80396730 end:0x80396738
+	.sbss       start:0x80398258 end:0x80398268
+
+dolphin/os/OSArena.c:
+	.text       start:0x800087C4 end:0x800088C4
+	.data       start:0x802D1F48 end:0x802D2018
+	.sdata      start:0x80396738 end:0x80396740
+	.sbss       start:0x80398268 end:0x80398270
+
+dolphin/os/OSAudioSystem.c:
+	.text       start:0x800088C4 end:0x80008B54
+	.data       start:0x802D2018 end:0x802D2170
+
 core/dll.c:
 	.text       start:0x80070B18 end:0x80070FD8
 	.data       start:0x802E8B60 end:0x802E9848

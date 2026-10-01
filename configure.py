@@ -209,6 +209,7 @@ cflags_base = [
     "-fp_contract on",
     "-str reuse",
     "-multibyte",  # For Wii compilers, replace with `-enc SJIS`
+    "-DDEBUG",
     "-i include",
     "-i sdk/include",
     "-i sdk/include/libc",
@@ -232,6 +233,7 @@ cflags_core = [
     "-fp_contract on",
     "-str reuse",
     "-multibyte",
+    "-DDEBUG",
     "-i include",
     "-i sdk/include",
     "-i sdk/include/libc",
@@ -243,6 +245,7 @@ cflags_core = [
     "-inline off",
     "-schedule off",
     "-sym on",
+    "-cwd source"
 ]
 
 cflags_dll = [*cflags_core]
@@ -286,8 +289,9 @@ config.linker_version = "GC/1.3.2"
 def DolphinLib(lib_name: str, objects: List[Object]) -> Dict[str, Any]:
     return {
         "lib": lib_name,
+        "src_dir": "sdk/src",
         "mw_version": "GC/1.2.5n",
-        "cflags": cflags_base,
+        "cflags": cflags_core,
         "progress_category": "sdk",
         "objects": objects,
     }
@@ -344,6 +348,14 @@ config.libs = [
             Object(NonMatching, "Runtime.PPCEABI.H/__init_cpp_exceptions.cpp"),
         ],
     },
+    DolphinLib("os", [
+        Object(NonMatching, "dolphin/os/OS.c"),
+        Object(NonMatching, "dolphin/os/OSAddress.c"),
+        Object(NonMatching, "dolphin/os/OSAlarm.c"),
+        Object(NonMatching, "dolphin/os/OSAlloc.c"),
+        Object(NonMatching, "dolphin/os/OSArena.c"),
+        Object(NonMatching, "dolphin/os/OSAudioSystem.c"),
+    ]),
     CoreLib("core", [
         Object(NonMatching, "core/dll.c")
     ]),
