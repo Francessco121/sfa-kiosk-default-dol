@@ -53,6 +53,12 @@ typedef struct DLLFile
 // Note: A DLL interface IS a pointer to a DLL state vtblPtr field (DLLState.vtblPtr)
 #define DLL_INTERFACE_TO_STATE(interfacePtr) ((DLLState*)((u32)interfacePtr - OFFSETOF(DLLState, vtblPtr)))
 
-void init_dll_system(void);
+void dllInit(void);
+void *dllLoad(u16 idOrIdx, u16 exportCount);
+/**
+ * Loads a DLL by ID or tab index and returns a pointer to its loaded interface.
+ */
+void *dllLoadActual(u16 idOrIdx, u16 exportCount, s32 bRunConstructor);
+s32 dllFree(void *dllInterfacePtr);
 
 #endif

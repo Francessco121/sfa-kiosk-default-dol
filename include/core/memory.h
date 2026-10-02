@@ -3,6 +3,7 @@
 
 #include "dolphin/types.h"
 
-void *mmAlloc(s32 size, s32 tag, const char *name);
+void* mmAlloc(s32 size, s32 tag, const char* name);
+void mmFree(void *address);
 
 #endif
