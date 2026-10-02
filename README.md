@@ -73,3 +73,10 @@ Once the initial build succeeds, an `objdiff.json` should exist in the project r
 Download the latest release from [encounter/objdiff](https://github.com/encounter/objdiff). Under project settings, set `Project directory`. The configuration should be loaded automatically.
 
 Select an object from the left sidebar to begin diffing. Changes to the project will rebuild automatically: changes to source files, headers, `configure.py`, `splits.txt` or `symbols.txt`.
+
+Credits
+=======
+- https://github.com/doldecomp/dolsdk2001
+- https://github.com/AxioDL/musyx
+- https://github.com/encounter/decomp-toolkit
+- https://github.com/zestydevy/dinosaur-planet
